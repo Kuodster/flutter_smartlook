@@ -51,7 +51,7 @@ class RenderParagraphDescriptor extends VisibleElementDescriptor {
         );
         textPainter.layout();
         final paragraphBuilder = ui.ParagraphBuilder(ui.ParagraphStyle());
-        theText.build(paragraphBuilder, textScaleFactor: 1.0); //todo scale
+        theText.build(paragraphBuilder, textScaler: TextScaler.noScaling); //todo scale
         final paragraph = paragraphBuilder.build();
         paragraph.layout(ui.ParagraphConstraints(
           width: element.size?.width ?? double.infinity,
